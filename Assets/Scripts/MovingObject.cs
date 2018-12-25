@@ -4,10 +4,6 @@ using UnityEngine;
 
 public  class MovingObject : MonoBehaviour {
     public int speed;
-    public Sprite spriteUpIdle;
-    public Sprite spriteDownIdle;
-    public Sprite spriteLeftIdle;
-    public Sprite spriteRightIdle;
 
 
     private enum State
@@ -38,8 +34,6 @@ public  class MovingObject : MonoBehaviour {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
-        //idleSprites = Resources.LoadAll<Sprite>("Atlas/PlayerIdleAtlas");
-        GetComponent<SpriteRenderer>().sprite = spriteLeftIdle;
     }
 
 
@@ -68,25 +62,6 @@ public  class MovingObject : MonoBehaviour {
     private void Update()
     {
         caculateState();
-        switch (direction)
-        {
-            case Direction.Up:
-                GetComponent<SpriteRenderer>().sprite = spriteUpIdle;
-                print(direction);
-                break;
-            case Direction.Down:
-                GetComponent<SpriteRenderer>().sprite = spriteDownIdle;
-                print(direction);
-                break;
-            case Direction.Left:
-                GetComponent<SpriteRenderer>().sprite = spriteLeftIdle;
-                print(direction);
-                break;
-            case Direction.Right:
-                GetComponent<SpriteRenderer>().sprite = spriteRightIdle;
-                print(direction);
-                break;
-        }
     }
     private void caculateState() {
         if (Input.GetKeyDown(KeyCode.UpArrow))
