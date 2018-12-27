@@ -116,7 +116,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1101 &1101310100461345542
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -164,7 +164,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1101 &1101558684776689932
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -260,7 +260,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1101 &1101995764370399458
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -284,7 +284,7 @@ AnimatorStateTransition:
   m_HasFixedDuration: 0
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
-  m_CanTransitionToSelf: 1
+  m_CanTransitionToSelf: 0
 --- !u!1102 &1102011288735531316
 AnimatorState:
   serializedVersion: 5
@@ -351,7 +351,7 @@ AnimatorState:
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
-  m_Mirror: 1
+  m_Mirror: 0
   m_SpeedParameterActive: 0
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
@@ -585,7 +585,7 @@ AnimatorStateMachine:
     m_Position: {x: 456, y: 660, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102796006139211544}
-    m_Position: {x: -108, y: 876, z: 0}
+    m_Position: {x: 828, y: 888, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102160801280999672}
     m_Position: {x: 432, y: 792, z: 0}

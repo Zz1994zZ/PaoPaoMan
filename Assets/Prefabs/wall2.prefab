@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4961954424760496}
   - component: {fileID: 212148857812350612}
   - component: {fileID: 61010353028748592}
+  - component: {fileID: 114871815483930480}
   m_Layer: 0
   m_Name: wall2
   m_TagString: wall2
@@ -57,15 +58,26 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
     newSize: {x: 0.5, y: 0.5}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5, y: 0.5}
+  m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114871815483930480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1848000408195464}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f6c1bad6dbd5abd409e4de78c3daae0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212148857812350612
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -99,7 +111,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 1117292553
-  m_SortingLayer: 3
+  m_SortingLayer: 2
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 2a130af4a57da3d47bc3365bbbd24ae7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
