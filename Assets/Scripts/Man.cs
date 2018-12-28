@@ -37,6 +37,7 @@ public  class Man : MonoBehaviour {
         //Get and store a reference to the Rigidbody2D component so that we can access it.
         rb2d = GetComponent<Rigidbody2D>();
         playerAnimator = GetComponent<Animator>();
+        GameManager.instance.players.Add(this);
     }
 
 
@@ -62,10 +63,7 @@ public  class Man : MonoBehaviour {
                 break;
       }
     }
-    void OnCollisionStay(Collision collisionInfo)
-    {
-        Debug.Log("Hello", gameObject);
-    }
+
 
     //放泡泡
     private void setBall() {

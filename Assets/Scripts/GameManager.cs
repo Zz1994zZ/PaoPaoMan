@@ -8,6 +8,8 @@ public class GameManager : MonoBehaviour {
     public  BoardManager mapScript;
     public GameObject ballSprite;
     [HideInInspector]
+    public  List<Man> players = new List<Man>();
+    [HideInInspector]
     public  int[,] map =  {
             {0,0,0,2,2,0,0,0,2,0,0,0,2,2,0,0,0},
             {0,0,1,2,0,2,2,2,0,2,2,2,0,2,1,0,0},
@@ -66,6 +68,11 @@ public class GameManager : MonoBehaviour {
             ball.force = force;
             ball.setPosition(row, column);
             boomableObjectMap[row, column] = ball;
+            foreach (Man man in players) {
+                if (man.row == row && man.column == column) {
+                    Physics2D.IgnoreCollision(ball.GetComponent<BoxCollider2D>(), man.GetComponent<CircleCollider2D>(), true);
+                }
+            }
         }
     }
 

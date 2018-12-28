@@ -9,7 +9,8 @@ public class Ball : MonoBehaviour, Boomable
     public float boomDelay;
     public GameObject[] boomSprite;
     //所在的格子
-    private int row, column;
+    [HideInInspector]
+    public  int row, column;
     // Use this for initialization
     void Start () {
         //这里不知道会不会有问题如果有问题的话
@@ -120,7 +121,14 @@ public class Ball : MonoBehaviour, Boomable
 
     // Update is called once per frame
     void Update () {
-		
-	}
+        List<Man> players = GameManager.instance.players;
+        foreach (Man man in players)
+        {
+            if (man.row != row || man.column != column)
+            {
+                Physics2D.IgnoreCollision(this.GetComponent<BoxCollider2D>(), man.GetComponent<CircleCollider2D>(), false);
+            }
+        }
+    }
 
 }
